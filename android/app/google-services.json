@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "597730001935",
+    "firebase_url": "https://ridesharing-2019.firebaseio.com",
+    "project_id": "ridesharing-2019",
+    "storage_bucket": "ridesharing-2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597730001935:android:ba46ad2a19b73430",
+        "android_client_info": {
+          "package_name": "com.ridepool.gettingstartedpages"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597730001935-i7camfsui9c9d04fp4msnjns9t4i5637.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ridepool.gettingstartedpages",
+            "certificate_hash": "c721e2daf9f910510743868f813f55741a0ff89a"
+          }
+        },
+        {
+          "client_id": "597730001935-6stu97sslnm9cg4fij14cvne80b194ur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIQ32JvmQZlhL9mjmvZ79i-980pVu8x0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597730001935-6stu97sslnm9cg4fij14cvne80b194ur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
