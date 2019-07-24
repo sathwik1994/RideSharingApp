@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login_page.dart';
-import 'home.dart';
+import 'postedRides.dart';
 //import 'display.dart';
 void main() {
   runApp(MaterialApp(
@@ -20,9 +20,9 @@ void main() {
             TextStyle(color: Colors.white, fontSize: 14.0, letterSpacing: 1.4),
       ),
     ),
-    /*routes: {
+    routes: {
       "Entry": (context) => DataScreen(title: 'Data screen',),
-    },*/
+    },
   ));
 }
 
