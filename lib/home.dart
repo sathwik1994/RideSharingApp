@@ -69,6 +69,8 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Posted Rides'),
+        backgroundColor: Color(0xFF293b72),
+
       ),
       drawer: new Drawer(
         child: new ListView(
@@ -116,9 +118,9 @@ class Home extends StatelessWidget {
             new ListTile(
               title: new Text('Log Out'),
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(
+                /*Navigator.push(context, MaterialPageRoute(
                   builder: (context) => LoginPage(),
-                ));
+                ));*/
               },
             ),
           ],

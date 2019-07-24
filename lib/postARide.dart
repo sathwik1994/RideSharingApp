@@ -46,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
       key: _scafoldKey,
       appBar: AppBar(
         title: Text("Post Ride"),
+        backgroundColor: Color(0xFF293b72),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
