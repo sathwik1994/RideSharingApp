@@ -13,7 +13,7 @@ class RequestedRides extends StatefulWidget {
 
 class _RequestedRides extends State<RequestedRides> {
 
-  Firestore _fireStore = Firestore.instance;
+  Firestore _fireStore3 = Firestore.instance;
   @override
   void initState() {
     super.initState();
@@ -24,9 +24,10 @@ class _RequestedRides extends State<RequestedRides> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Requested Rides"),
+        backgroundColor: Color(0xFFE65100),
       ),
       body: StreamBuilder(
-        stream: _fireStore.collection('RequestRide').snapshots(),
+        stream: _fireStore3.collection('RequestRide').snapshots(),
         builder: (context,snapshot) {
           if(snapshot.hasError) {
             return Center(
@@ -44,7 +45,7 @@ class _RequestedRides extends State<RequestedRides> {
                 return GestureDetector(
                   onTap: () {
                     Navigator.of(context).pushNamed(
-                        'Entry',
+                        'Entry2',
                         arguments: query.documents[index]
                     );
                   },
@@ -57,12 +58,12 @@ class _RequestedRides extends State<RequestedRides> {
                           children: <Widget>[
                             Text(query.documents[index]['From'] == null ? "null":query.documents[index]['From'],
                               style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.black, fontSize: 18
                               ),),
                             Padding(padding: EdgeInsets.all(28),),
                             Text(query.documents[index]['To'] == null ? "null":query.documents[index]['To'],
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.black, fontSize: 18
                                 )),
                           ],
                         ),
@@ -71,19 +72,19 @@ class _RequestedRides extends State<RequestedRides> {
                           children: <Widget>[
                             Text(query.documents[index]['Travel Date'] == null ? "null":""+_formatDate(query.documents[index]['Travel Date']),
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.black, fontSize: 18
                                 )),
                             Padding(padding: EdgeInsets.all(14),),
-                            Text(query.documents[index]['Cost'] == null ? "null":query.documents[index]['Cost'],
+                            Text(query.documents[index]['Cost'] == null ? "null":query.documents[index]['Cost']+"\$",
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.black, fontSize: 18
                                 )),
-                            Text(","),
-                            Text(","),
-                            Text(","),
+                            Text(" "),
+                            Text(" "),
+                            Text(" "),
                             Text(query.documents[index]['Seats Available'] == null ? "null":query.documents[index]['Seats Available'],
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.black, fontSize: 18
                                 )),
                           ],
                         ),
@@ -105,8 +106,8 @@ class _RequestedRides extends State<RequestedRides> {
   }
 }
 
-class DataScreen extends StatelessWidget {
-  DataScreen({Key key, this.title}) : super(key: key);
+class DataScreen2 extends StatelessWidget {
+  DataScreen2({Key key, this.title}) : super(key: key);
   final String title;
 
   @override

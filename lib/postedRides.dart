@@ -13,7 +13,7 @@ class PostedRides extends StatefulWidget {
 
 class _PostedRides extends State<PostedRides> {
 
-  Firestore _fireStore = Firestore.instance;
+  Firestore _fireStore1 = Firestore.instance;
   @override
   void initState() {
     super.initState();
@@ -24,9 +24,10 @@ class _PostedRides extends State<PostedRides> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Posted Rides"),
+        backgroundColor: Color(0xFFE65100),
       ),
       body: StreamBuilder(
-        stream: _fireStore.collection('PostRide').snapshots(),
+        stream: _fireStore1.collection('PostRide').snapshots(),
         builder: (context,snapshot) {
           if(snapshot.hasError) {
             return Center(
@@ -49,6 +50,7 @@ class _PostedRides extends State<PostedRides> {
                     );
                   },
                   child: Card(
+                    //child: new InkWell(
                     margin: EdgeInsets.all(12),
                     child: Column(
                       children: <Widget>[
@@ -57,12 +59,12 @@ class _PostedRides extends State<PostedRides> {
                           children: <Widget>[
                             Text(query.documents[index]['From'] == null ? "null":query.documents[index]['From'],
                               style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.black, fontSize: 18
                               ),),
                             Padding(padding: EdgeInsets.all(28),),
                             Text(query.documents[index]['To'] == null ? "null":query.documents[index]['To'],
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.black, fontSize: 18
                                 )),
                           ],
                         ),
@@ -71,24 +73,27 @@ class _PostedRides extends State<PostedRides> {
                           children: <Widget>[
                             Text(query.documents[index]['Travel Date'] == null ? "null":""+_formatDate(query.documents[index]['Travel Date']),
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.black, fontSize: 18
                                 )),
                             Padding(padding: EdgeInsets.all(14),),
-                            Text(query.documents[index]['Cost'] == null ? "null":query.documents[index]['Cost'],
+                            Text(query.documents[index]['Cost'] == null ? "null":query.documents[index]['Cost']+"\$",
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.black, fontSize: 18
                                 )),
-                            Text(","),
-                            Text(","),
-                            Text(","),
+                            Text(" "),
+                            Text(" "),
+                            Text(" "),
                             Text(query.documents[index]['Seats Available'] == null ? "null":query.documents[index]['Seats Available'],
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.black, fontSize: 18
                                 )),
                           ],
+
                         ),
+
                       ],
                     ),
+
                   ),
                 );
               },
@@ -105,8 +110,8 @@ class _PostedRides extends State<PostedRides> {
   }
 }
 
-class DataScreen extends StatelessWidget {
-  DataScreen({Key key, this.title}) : super(key: key);
+class DataScreen1 extends StatelessWidget {
+  DataScreen1({Key key, this.title}) : super(key: key);
   final String title;
 
   @override

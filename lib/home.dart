@@ -12,8 +12,8 @@ class Home extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Posted Rides'),
-        backgroundColor: Color(0xFF293b72),
+        title: Text('RideShare'),
+        backgroundColor: Color(0xFFE65100),
 
       ),
       drawer: new Drawer(
@@ -62,18 +62,22 @@ class Home extends StatelessWidget {
             new ListTile(
               title: new Text('Log Out'),
               onTap: (){
-                /*Navigator.push(context, MaterialPageRoute(
+                Navigator.push(context, MaterialPageRoute(
                   builder: (context) => LoginPage(),
-                ));*/
+                ));
               },
             ),
           ],
         ),
       ),
-      body: PostedRides(), /*new Center(
-          child: new Text('No rides available',
-              style: TextStyle(fontSize: 30.0, color: Colors.black))
-      ),*/
+      body: new Center(
+          child: new Text('Welcome To The RideSharing App... You can Save lots of \$ here. '
+              'You will be indirectly responsible for the Pollution reduction by using this App. '
+              'So be Proud using this App. '
+              'Please select the Options in the left-top Options bar... '
+              'Thank You for using this App and making this earth a Wonderful Place... ',
+              style: TextStyle(fontSize: 24.0, color: Colors.black))
+      ),
       //FAB is a property of the `Scaffold` Widget
 
       /*floatingActionButton: FloatingActionButton.extended(

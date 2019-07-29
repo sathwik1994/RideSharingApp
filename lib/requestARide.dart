@@ -38,7 +38,7 @@ class _MyHomePageState2 extends State<MyHomePage2> {
       _travelDate = DateTime.now().toString(), _cost, _seats, _carType;
 
   /* Firestore instance used to insert or fetch from the database */
-  final Firestore _fireStore = Firestore.instance;
+  final Firestore _fireStore2 = Firestore.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class _MyHomePageState2 extends State<MyHomePage2> {
       key: _scafoldKey,
       appBar: AppBar(
         title: Text("Request A Ride"),
-        backgroundColor: Color(0xFF293b72),
+        backgroundColor: Color(0xFFE65100),
 
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -270,7 +270,7 @@ class _MyHomePageState2 extends State<MyHomePage2> {
                     if(_formKey.currentState.validate()) {
                       _formKey.currentState.save();
                       /* Uuid().v1() will generate a time based random unique ID to use as a document name. Because firestore is a NoSQL database*/
-                      await _fireStore.collection('RequestRide').document(Uuid().v1()).setData({
+                      await _fireStore2.collection('RequestRide').document(Uuid().v1()).setData({
                         'firstName' : _firstName,
                         'Last Name' : _lastName,
                         'Phone Number' : _phoneNumber,

@@ -10,7 +10,7 @@ class PostARide extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Color(0xFFE65100),
       ),
       home: MyHomePage(title: 'Well data'),
     );
@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
       key: _scafoldKey,
       appBar: AppBar(
         title: Text("Post Ride"),
-        backgroundColor: Color(0xFF293b72),
+        backgroundColor: Color(0xFFE65100),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {

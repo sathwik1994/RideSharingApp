@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_challange_login_signup_page/requestedRides.dart';
 import 'login_page.dart';
 import 'postedRides.dart';
 //import 'display.dart';
@@ -8,7 +9,7 @@ void main() {
     home: GettingStarted(),
     theme: ThemeData(
       
-      primaryColor: Color(0xFF293b72),
+      primaryColor: Color(0xFFE65100),
       accentColor: Color(0xFFff2e7a),
       textTheme: TextTheme(
         display3: TextStyle(
@@ -21,7 +22,8 @@ void main() {
       ),
     ),
     routes: {
-      "Entry": (context) => DataScreen(title: 'Data screen',),
+      "Entry": (context) => DataScreen1(title: 'Data screen',),
+      "Entry2": (context) => DataScreen2(title: 'Data screen',),
     },
   ));
 }

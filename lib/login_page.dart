@@ -78,7 +78,8 @@ class LoginPage extends StatelessWidget {
       resizeToAvoidBottomPadding: false,
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: Theme.of(context).accentColor,
+
+        backgroundColor: Color(0xFFE65100),
           label: Text('Sign up'),
         //child: Icon(Icons.add_box),
         onPressed: () {
